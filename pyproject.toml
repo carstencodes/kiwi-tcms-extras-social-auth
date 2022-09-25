@@ -30,3 +30,18 @@ licenses = [
 
 [project.entry-points.pdm]
 "kiwitcms.plugins" = "tcms_extras_socialauth"
+
+[tool.mypy]
+exclude = [ ".venv", "__pypackages__" ]
+
+[tool.mypy.tcms]
+ignore_missing_imports = true
+
+[tool.mypy.simpleicons]
+ignore_missing_imports = true
+
+[tool.mypy.social_core]
+ignore_missing_imports = true
+
+[tool.mypy.django]
+ignore_missing_imports = true
