@@ -1,5 +1,5 @@
 [project]
-name = "kiwi-tcms-plugins-social-auth"
+name = "kiwi-tcms-extras-social-auth"
 version = "0.1.0"
 description = "Social authentication support for kiwi TCMS"
 authors = [

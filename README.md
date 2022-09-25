@@ -1,3 +1,3 @@
-# kiwi-tcms-plugins-social-auth
+# kiwi-tcms-extras-social-auth
 
 Social authentication support for kiwi TCMS
