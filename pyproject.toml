@@ -36,18 +36,10 @@ type-checking = [
 
 [tool.mypy]
 exclude = [ ".venv", "__pypackages__" ]
-
-[tool.mypy.tcms]
 ignore_missing_imports = true
-
-[tool.mypy.simpleicons]
-ignore_missing_imports = true
-
-[tool.mypy.social_core]
-ignore_missing_imports = true
-
-[tool.mypy.django]
-ignore_missing_imports = true
-
-[tool.mypy.django-stubs]
-ignore_missing_imports = true
+follow-imports = "silent"
+show-column-numbers = true
+disallow-untyped-defs = true
+disallow-untyped-calls = true
+install-types = true
+non-interactive = true

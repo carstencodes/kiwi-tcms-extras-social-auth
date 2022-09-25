@@ -1,4 +1,17 @@
 {
   "python.autoComplete.extraPaths": ["__pypackages__/<major.minor>/lib"],
-  "python.analysis.extraPaths": ["__pypackages__/<major.minor>/lib"]
+  "python.analysis.extraPaths": ["__pypackages__/<major.minor>/lib"],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyCategorySeverity.error":"Warning",
+  "python.linting.mypyArgs": [
+    "--ignore-missing-imports",
+    "--follow-imports=silent",
+    "--show-column-numbers",
+    "--disallow-untyped-defs",
+    "--disallow-untyped-calls",
+    "--install-types",
+    "--non-interactive"
+  ]
 }
