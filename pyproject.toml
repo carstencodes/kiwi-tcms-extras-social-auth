@@ -27,6 +27,9 @@ licenses = [
     "pip-audit>=2.4.4",
     "licenseheaders>=0.8.8",
 ]
+type-checking = [
+    "django-stubs>=1.12.0",
+]
 
 [project.entry-points.pdm]
 "kiwitcms.plugins" = "tcms_extras_socialauth"
@@ -44,4 +47,7 @@ ignore_missing_imports = true
 ignore_missing_imports = true
 
 [tool.mypy.django]
+ignore_missing_imports = true
+
+[tool.mypy.django-stubs]
 ignore_missing_imports = true
