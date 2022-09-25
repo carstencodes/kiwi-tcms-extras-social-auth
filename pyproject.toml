@@ -29,4 +29,4 @@ licenses = [
 ]
 
 [project.entry-points.pdm]
-tcms-socialauth = "tcms_extras_socialauth"
+"kiwitcms.plugins" = "tcms_extras_socialauth"
