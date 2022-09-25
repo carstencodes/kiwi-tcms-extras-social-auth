@@ -1,0 +1,32 @@
+[project]
+name = "kiwi-tcms-plugins-social-auth"
+version = "0.1.0"
+description = "Social authentication support for kiwi TCMS"
+authors = [
+    {name = "Carsten Igel", email = "cig@bite-that-bit.de"},
+]
+dependencies = [
+    "django==4.0.7",
+    "social-auth-app-django>=5.0.0",
+    "simpleicons>=6.23.0",
+    "kiwitcms>=11.5",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "GPLv3"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+licenses = [
+    "pip-audit>=2.4.4",
+    "licenseheaders>=0.8.8",
+]
+
+[project.entry-points.pdm]
+tcms-socialauth = "tcms_plugin_socialauth"
