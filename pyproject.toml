@@ -29,4 +29,4 @@ licenses = [
 ]
 
 [project.entry-points.pdm]
-tcms-socialauth = "tcms_plugin_socialauth"
+tcms-socialauth = "tcms_extras_socialauth"
