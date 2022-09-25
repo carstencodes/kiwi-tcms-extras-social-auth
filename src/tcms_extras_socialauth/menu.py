@@ -18,4 +18,4 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-MENU_ITEMS = []
+MENU_ITEMS: list[dict] = []
