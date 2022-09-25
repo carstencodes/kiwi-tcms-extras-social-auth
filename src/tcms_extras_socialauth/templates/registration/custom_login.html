@@ -22,14 +22,43 @@
 
 {% block custom_login %}
 <div>
-    {% for backend in backends.backends %}
-    <div class="social_login">
-        <a href='{% url social:begin backend|lower %}'>
-            <span class="glyph">{{ backend|lower|get_social_icon }}</span>
-            <span class="provider_name">{{ backend|title }}</span>
-        </a> 
-    &nbsp;
+    <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
+        <span class="social-login-block">Continue with</span>
     </div>
-    {% endfor %}
+    <div class="col-xs-4 col-sm-4 col-md-4 submit">
+        <div class="social_login btn-group" role="group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span class="glyph">
+                    <!-- 
+                        User.svg, published under MIT license in 
+                        https://github.com/feathericons/feather/tree/f81cd40fdcdd5e94f3f97eb670a5058e3aac528d
+                     -->
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        >
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                </span>
+                <span class="provider_name">Social login</span>
+            </button>
+            <div class="dropdown-menu">
+            {% for backend in backends.backends %}
+                <a href='{% url social:begin backend|lower %}' class="dropdown-item">
+                    <span class="glyph">{{ backend|lower|get_social_icon }}</span>
+                    <span class="provider_name">{{ backend|title }}</span>
+                </a> 
+            {% endfor %}
+            </div>
+        </div>
+    </div>  
 </div>
 {% endblock %}
