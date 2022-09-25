@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2022 Carsten Igel.
 #
-# This file is part of Social Auth Provider for Kiwi TCMS 
+# This file is part of Social Auth Provider for Kiwi TCMS
 # (see https://github.com/carstencodes/kiwi-tcms-extras-social-auth).
 #
 # This program is free software: you can redistribute it and/or modify
@@ -31,24 +31,23 @@ if TYPE_CHECKING:
 
 # This implementation is based on the excellent work of
 # Alexander Todorov (atodorov).
-# See original implementation at 
+# See original implementation at
 # https://github.com/kiwitcms/enterprise/blob/ff306f3e6578f3a3fd416aa957ec212d7f8e19eb/tcms_enterprise/pipeline.py
 
+
 def is_required(
-        strategy: 'BaseStrategy', # NOSONAR
-        details: dict,
-        backend: 'BaseAuth', 
-        user: 'User' = None, # NOSONAR
-        *args: tuple[str, ...], # NOSONAR
-        **kwargs, # NOSONAR
-        ) -> Optional[HttpResponseRedirect]:
-    if 'email' not in details or \
-            len(str(details['email'])) == 0:
+    strategy: "BaseStrategy",  # NOSONAR
+    details: dict,
+    backend: "BaseAuth",
+    user: "User" = None,  # NOSONAR
+    *args: tuple[str, ...],  # NOSONAR
+    **kwargs,  # NOSONAR
+) -> Optional[HttpResponseRedirect]:
+    if "email" not in details or len(str(details["email"])) == 0:
         messages.error(
-            backend.request or \
-            backend.strategy.request,
+            backend.request or backend.strategy.request,
             "E-Mail address is required, but missing.",
         )
-        return HttpResponseRedirect(reverse('tcms-login'))
-    
+        return HttpResponseRedirect(reverse("tcms-login"))
+
     return None

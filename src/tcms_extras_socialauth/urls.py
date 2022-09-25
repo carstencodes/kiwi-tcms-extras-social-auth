@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2022 Carsten Igel.
 #
-# This file is part of Social Auth Provider for Kiwi TCMS 
+# This file is part of Social Auth Provider for Kiwi TCMS
 # (see https://github.com/carstencodes/kiwi-tcms-extras-social-auth).
 #
 # This program is free software: you can redistribute it and/or modify
@@ -25,5 +25,5 @@ from tcms.urls import urlpatterns
 
 
 urlpatterns += [
-    re_path(r'', include('social_django.urls', namespace='social')),
+    re_path(r"", include("social_django.urls", namespace="social")),
 ]

@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2022 Carsten Igel.
 #
-# This file is part of Social Auth Provider for Kiwi TCMS 
+# This file is part of Social Auth Provider for Kiwi TCMS
 # (see https://github.com/carstencodes/kiwi-tcms-extras-social-auth).
 #
 # This program is free software: you can redistribute it and/or modify
@@ -18,4 +18,4 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-__path__ = __import__('pkgutil').extend_path(__path__, __name__)
+__path__ = __import__("pkgutil").extend_path(__path__, __name__)

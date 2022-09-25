@@ -1,7 +1,7 @@
 #
 # Copyright (c) 2022 Carsten Igel.
 #
-# This file is part of Social Auth Provider for Kiwi TCMS 
+# This file is part of Social Auth Provider for Kiwi TCMS
 # (see https://github.com/carstencodes/kiwi-tcms-extras-social-auth).
 #
 # This program is free software: you can redistribute it and/or modify
@@ -21,20 +21,20 @@
 from typing import Final, FrozenSet
 
 from simpleicons.all import icons
-from social_core import backends 
+from social_core import backends
 from django.template import Library
 
-supported_providers: Final[FrozenSet[str]] = frozenset([
-  mod.lower() for mod in dir(backends) if mod is not None and "__" not in mod
-])
+supported_providers: Final[FrozenSet[str]] = frozenset(
+    [mod.lower() for mod in dir(backends) if mod is not None and "__" not in mod]
+)
 register: Library = Library()
 
-# Icon: User.svg Provided by 
+# Icon: User.svg Provided by
 # Feather Icons
 # Copyright (c) 2013-2017 Cole Bemis
 # Published under MIT License
 # SRC: https://github.com/feathericons/feather/tree/f81cd40fdcdd5e94f3f97eb670a5058e3aac528d
-_USER_ICON="""
+_USER_ICON = """
 <svg
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -50,6 +50,7 @@ _USER_ICON="""
   <circle cx="12" cy="7" r="4" />
 </svg>
 """
+
 
 @register.filter
 def get_social_icon(backend: str) -> str:
