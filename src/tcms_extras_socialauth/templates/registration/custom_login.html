@@ -27,7 +27,7 @@
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 submit">
         <div class="social_login btn-group" role="group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 <span class="glyph">
                     <!-- 
                         User.svg, published under MIT license in 
@@ -52,10 +52,14 @@
             </button>
             <div class="dropdown-menu">
             {% for backend in backends.backends %}
-                <a href='{% url social:begin backend|lower %}' class="dropdown-item">
+                <a href='{% url social:begin backend|lower %}' class="dropdown-item" style="display: block">
                     <span class="glyph">{{ backend|lower|get_social_icon }}</span>
                     <span class="provider_name">{{ backend|title }}</span>
-                </a> 
+                </a>
+                <a href='{% url social:begin backend|lower %}' class="dropdown-item" style="display: block">
+                    <span class="glyph">{{ backend|lower|get_social_icon }}</span>
+                    <span class="provider_name">{{ backend|title }}</span>
+                </a>
             {% endfor %}
             </div>
         </div>
