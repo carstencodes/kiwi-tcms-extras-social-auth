@@ -1,6 +1,6 @@
 [project]
 name = "kiwi-tcms-extras-social-auth"
-version = "0.1.0"
+version = "0.8.0"
 description = "Social authentication support for kiwi TCMS"
 authors = [
     {name = "Carsten Igel", email = "cig@bite-that-bit.de"},
